@@ -1,0 +1,21 @@
+row_id,value,column,category
+EMBER_APK_TEST_8869,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_7457,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_10628,AUM,APK_LightGBM,High-confidence misclassification
+EMBER_APK_TEST_9022,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_7984,AUM,APK_LightGBM,High-confidence misclassification
+EMBER_APK_TEST_3538,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_10693,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_2393,AUM,APK_LightGBM,High-confidence misclassification
+EMBER_APK_TEST_10386,AUM,APK_LightGBM,High-confidence misclassification
+EMBER_APK_TEST_8094,AUM,APK_LightGBM,High-confidence misclassification
+EMBER_APK_TEST_5613,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_4301,AUM,APK_LightGBM,High-confidence misclassification
+EMBER_APK_TEST_9423,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_1886,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_6129,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_3586,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_6735,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_8898,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_2626,AUM,APK_LightGBM,Moderate-confidence misclassification
+EMBER_APK_TEST_2419,AUM,APK_LightGBM,High-confidence misclassification

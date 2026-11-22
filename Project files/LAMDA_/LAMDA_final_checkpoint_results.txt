@@ -1,0 +1,76 @@
+split.csv: 38741 rows. scores.csv: 10982 rows, 2 value(s), 1 column(s).
+Values: baseline, after_aqua
+
+Rows per dataset and split
+--------------------------
+dataset      split  rows  positive  negative  positive %
+  LAMDA      train 24896       527     24369        2.12
+  LAMDA validation  8354        66      8288        0.79
+  LAMDA       test  5491        42      5449        0.76
+
+Metrics per value and column (positive when score >= the threshold)
+-------------------------------------------------------------------
+Each value is followed by its 95% bootstrap interval in brackets.
+
+Value: baseline   Column: Transformer
+  threshold                 0.5
+  test rows                 5491
+  positive rows             42 (0.76%)
+  negative rows             5449 (99.24%)
+  bootstrap resamples       1000
+  random-scorer AP          0.0076 (equals the positive share)
+  random-scorer AUROC       0.5000
+  precision                 0.0404 [0.0250, 0.0568]
+  recall                    0.5952 [0.4418, 0.7500]
+  false-positive rate       0.1090 [0.1005, 0.1171]
+  AP                        0.1201 [0.0554, 0.2491]
+  AUROC                     0.8372 [0.7749, 0.8973]
+
+Value: after_aqua   Column: Transformer
+  threshold                 0.5
+  test rows                 5491
+  positive rows             42 (0.76%)
+  negative rows             5449 (99.24%)
+  bootstrap resamples       1000
+  random-scorer AP          0.0076 (equals the positive share)
+  random-scorer AUROC       0.5000
+  precision                 0.2286 [0.1000, 0.3784]
+  recall                    0.1905 [0.0811, 0.3250]
+  false-positive rate       0.0050 [0.0033, 0.0068]
+  AP                        0.0929 [0.0390, 0.2009]
+  AUROC                     0.7183 [0.6215, 0.8206]
+
+Results table: recall [95% interval] (copy into section 1(d))
+-------------------------------------------------------------
+A one-class cell holds the metric the checker prints for it, named in parentheses.
+
+Column: Transformer
+  baseline     0.5952 [0.4418, 0.7500]
+  after_aqua   0.1905 [0.0811, 0.3250]
+
+Difference from the baseline value 'baseline' (copy into section 1(e))
+----------------------------------------------------------------------
+Difference = the value's metric minus the baseline value's metric in the same column.
+Direction of interest: higher. Change = the difference.
+The verdict in section 1(e) compares the change with your yes and no differences.
+
+Column: Transformer
+  after_aqua   difference -0.4048   change -0.4048 (recall)
+
+Error sample (section 4)
+------------------------
+Value: baseline   Column: Transformer
+  misclassified rows available   594 false positives, 17 false negatives
+  sampled                        10 false positives, 10 false negatives
+
+error                        false positive  false negative  total
+category                                                          
+benign_predicted_as_malware              10               0     10
+malware_predicted_as_benign               0              10     10
+
+Warnings
+--------
+None.
+
+
+Errors:

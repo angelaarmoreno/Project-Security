@@ -1,0 +1,76 @@
+split.csv: 64000 rows. scores.csv: 24000 rows, 2 value(s), 1 column(s).
+Values: baseline, AUM
+
+Rows per dataset and split
+--------------------------
+dataset      split  rows  positive  negative  positive %
+    APK      train 41600     20717     20883       49.80
+    APK validation 10400      5223      5177       50.22
+    APK       test 12000      6113      5887       50.94
+
+Metrics per value and column (positive when score >= the threshold)
+-------------------------------------------------------------------
+Each value is followed by its 95% bootstrap interval in brackets.
+
+Value: baseline   Column: APK_LightGBM
+  threshold                 0.5
+  test rows                 12000
+  positive rows             6113 (50.94%)
+  negative rows             5887 (49.06%)
+  bootstrap resamples       1000
+  random-scorer AP          0.5094 (equals the positive share)
+  random-scorer AUROC       0.5000
+  precision                 0.9270 [0.9199, 0.9335]
+  recall                    0.8356 [0.8265, 0.8449]
+  false-positive rate       0.0683 [0.0624, 0.0747]
+  AP                        0.9621 [0.9587, 0.9652]
+  AUROC                     0.9588 [0.9555, 0.9617]
+
+Value: AUM   Column: APK_LightGBM
+  threshold                 0.5
+  test rows                 12000
+  positive rows             6113 (50.94%)
+  negative rows             5887 (49.06%)
+  bootstrap resamples       1000
+  random-scorer AP          0.5094 (equals the positive share)
+  random-scorer AUROC       0.5000
+  precision                 0.9241 [0.9172, 0.9307]
+  recall                    0.8287 [0.8188, 0.8386]
+  false-positive rate       0.0707 [0.0644, 0.0769]
+  AP                        0.9613 [0.9579, 0.9647]
+  AUROC                     0.9579 [0.9549, 0.9611]
+
+Results table: recall [95% interval] (copy into section 1(d))
+-------------------------------------------------------------
+A one-class cell holds the metric the checker prints for it, named in parentheses.
+
+Column: APK_LightGBM
+  baseline   0.8356 [0.8265, 0.8449]
+  AUM        0.8287 [0.8188, 0.8386]
+
+Difference from the baseline value 'baseline' (copy into section 1(e))
+----------------------------------------------------------------------
+Difference = the value's metric minus the baseline value's metric in the same column.
+Direction of interest: higher. Change = the difference.
+The verdict in section 1(e) compares the change with your yes and no differences.
+
+Column: APK_LightGBM
+  AUM        difference -0.0069   change -0.0069 (recall)
+
+Error sample (section 4)
+------------------------
+Value: AUM   Column: APK_LightGBM
+  misclassified rows available   416 false positives, 1047 false negatives
+  sampled                        10 false positives, 10 false negatives
+
+error                                  false positive  false negative  total
+category                                                                    
+Moderate-confidence misclassification               5               8     13
+High-confidence misclassification                   5               2      7
+
+Warnings
+--------
+None.
+
+
+Errors:
